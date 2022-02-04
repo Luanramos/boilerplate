@@ -1,0 +1,29 @@
+{
+  "name": "apiki/sumicity",
+  "require": {
+    "composer/installers": "1.10.0",
+    "htmlburger/carbon-fields": "3.2.3"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "0.7.1",
+    "phpcompatibility/phpcompatibility-wp": "2.1.1",
+    "squizlabs/php_codesniffer": "3.5.8",
+    "wp-coding-standards/wpcs": "2.3.0",
+    "slevomat/coding-standard": "6.4.1",
+    "automattic/phpcs-neutron-standard": "1.7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Apiki\\Theme\\": "src/"
+    }
+  },
+  "scripts": {
+    "install-codestandards": [
+      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+    ],
+    "lint": "phpcs",
+    "lint:fix": "phpcbf"
+  },
+  "type": "wordpress-theme",
+  "description": "Composer for child theme"
+}
